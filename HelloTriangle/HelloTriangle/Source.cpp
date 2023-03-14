@@ -129,7 +129,7 @@ int main()
 
 		glUniform4f(colorLoc, 0.0f, 0.0f, 1.0f, 1.0f); //enviando cor para variável uniform inputColor
 
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
 
 		// Chamada de desenho - drawcall
 		// CONTORNO - GL_LINE_LOOP
@@ -221,10 +221,13 @@ int setupGeometry()
 	// Cada atributo do vértice (coordenada, cores, coordenadas de textura, normal, etc)
 	// Pode ser arazenado em um VBO único ou em VBOs separados
 	GLfloat vertices[] = {
-		-0.5, -0.5, 0.0,
-		 0.5, -0.5, 0.0,
-		 0.0, 0.5, 0.0,
+		 -0.5, 0.5, 0.0,
+		  0.5, 0.5, 0.0,
+		  0.0, 0.0, 0.0,
 		 //outro triangulo vai aqui
+		  0.0,  0.0, 0.0,
+		 -0.5, -0.5, 0.0,
+		  0.5, -0.5, 0.0
 	};
 
 	GLuint VBO, VAO;
