@@ -129,7 +129,7 @@ int main()
 
 		glUniform4f(colorLoc, 0.0f, 0.0f, 1.0f, 1.0f); //enviando cor para variável uniform inputColor
 
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glDrawArrays(GL_TRIANGLES, 0, 6); //quantidade de triangulos
 
 		// Chamada de desenho - drawcall
 		// CONTORNO - GL_LINE_LOOP
@@ -137,7 +137,8 @@ int main()
 
 		glUniform4f(colorLoc, 1.0f, 0.0f, 1.0f, 1.0f); //enviando cor para variável uniform inputColor
 		
-		glDrawArrays(GL_LINE_LOOP, 0, 3);
+		glDrawArrays(GL_POINTS, 0, 6);		//somente pontos
+		glDrawArrays(GL_LINE_LOOP, 0, 6);	//contorno
 
 
 		glBindVertexArray(0); //Desconectando o buffer de geometria
